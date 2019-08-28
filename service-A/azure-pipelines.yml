@@ -3,6 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+name: service-A
 trigger:
 - master
 
@@ -16,4 +17,5 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
+    printenv | sort
   displayName: 'Run a multi-line script'
