@@ -26,4 +26,7 @@ steps:
     # echo See https://aka.ms/yaml
     # printenv | sort
     echo "The name of this service is: $(BUILD.BUILDNUMBER)"
+    echo ""
+    pwd
+    ls -la
   displayName: 'Run a multi-line script'
