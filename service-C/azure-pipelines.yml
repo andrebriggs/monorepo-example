@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 #Set this when scaffolding
-name: service-B 
+name: service-C
 
 trigger:
 - master
@@ -17,7 +17,8 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    printenv | sort
+    # echo Add other tasks to build, test, and deploy your project.
+    # echo See https://aka.ms/yaml
+    # printenv | sort
+    echo "The name of this service is: $(BUILD.BUILDNUMBER)"
   displayName: 'Run a multi-line script'
