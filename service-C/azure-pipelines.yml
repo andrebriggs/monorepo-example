@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 #Set this when scaffolding
-name: service-C
+name: 'service-C'
 
 trigger:
 - master
