@@ -7,8 +7,13 @@
 name: service-mono
 
 trigger:
-- master
-
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - '/'
+    
 pool:
   vmImage: 'ubuntu-latest'
 

@@ -7,12 +7,7 @@
 name: 'service-C'
 
 trigger:
-  branches:
-    include:
-    - master
-  paths:
-    include:
-    - '/'
+- master
 
 pool:
   vmImage: 'ubuntu-latest'
