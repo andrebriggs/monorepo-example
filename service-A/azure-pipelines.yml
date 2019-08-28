@@ -7,7 +7,12 @@
 name: 'service-A' 
 
 trigger:
-- master
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - '/$(BUILD.BUILDNUMBER)/*'
 
 pool:
   vmImage: 'ubuntu-latest'
