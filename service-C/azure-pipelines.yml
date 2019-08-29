@@ -6,6 +6,9 @@
 #Set this when scaffolding
 #Name will appear as part of the specific instance build name in the ADO UI
 #name: 'service-C'
+variables:
+- name: directoryName
+  value: service-C
 
 trigger:
   branches:
@@ -30,6 +33,6 @@ steps:
     echo ""
     pwd
     ls -la
-    cd $(BUILD.BUILDNUMBER)
+    cd $(directoryName)
     ls -la
   displayName: 'Run a multi-line script'
