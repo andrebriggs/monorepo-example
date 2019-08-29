@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 #Set this when scaffolding
-#name: 'service-A' 
+name: 'service-A' 
 
 trigger:
   branches:
