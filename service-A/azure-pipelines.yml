@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 #Set this when scaffolding
-name: 'service-A' 
+#name: 'service-A' 
 
 trigger:
   branches:
@@ -12,7 +12,9 @@ trigger:
     - master
   paths:
     include:
-    - '/service-A/*'
+    #Can't use a variable since they are evaluated at runtime, not at trigger time.
+    #Hardcoding for now
+    - '/service-A/*' 
 
 pool:
   vmImage: 'ubuntu-latest'
