@@ -4,7 +4,8 @@
 # https://aka.ms/yaml
 
 #Set this when scaffolding
-name: 'service-C'
+#Name will appear as part of the specific instance build name in the ADO UI
+#name: 'service-C'
 
 trigger:
   branches:
