@@ -42,7 +42,7 @@ steps:
 
 - script: |
     # Use ACR build task to build and push
-    cd service-a
+    cd service-A
     echo "az acr build -r $(ACR_NAME) --image $(Build.Repository.Name):$(build.SourceBranchName)-$(build.BuildId) ."
     az acr build -r $(ACR_NAME) --image $(Build.Repository.Name):$(build.SourceBranchName)-$(build.BuildId) .
   #workingDirectory: '$(modulePath)'
