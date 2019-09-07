@@ -1,10 +1,12 @@
 # Monorepo Example
 
-Welcome to the monorepo. Changes at the top level won't trigger any builds.
+Welcome to the Monorepo. Changes at the top level won't trigger any builds.
 
 Each "service" builds an image and pushes to an ACR instance with the image format of `servicename:branch-buildid`
 
-Azure Dev Ops Pipelines: https://dev.azure.com/abrig/bedrock_gitops_v2/_build
+![alt text](images/acr.png)
+
+You can see the associated Azure Dev Ops Pipelines here: https://dev.azure.com/abrig/bedrock_gitops_v2/_build
 
 ## Creating ACR
 <pre>
