@@ -40,12 +40,13 @@ steps:
   #workingDirectory: '$(modulePath)'
   displayName: 'Azure Login'
 
-# - script: |
-#     # Use ACR build task to build and push
-#     echo "az acr build -r $(ACR_NAME) --image $(Build.Repository.Name):$(build.SourceBranchName)-$(build.BuildId) ."
-#     az acr build -r $(ACR_NAME) --image $(Build.Repository.Name):$(build.SourceBranchName)-$(build.BuildId) .
-#   #workingDirectory: '$(modulePath)'
-#   displayName: 'ACR Build and Publish'
+- script: |
+    # Use ACR build task to build and push
+    cd service-a
+    echo "az acr build -r $(ACR_NAME) --image $(Build.Repository.Name):$(build.SourceBranchName)-$(build.BuildId) ."
+    az acr build -r $(ACR_NAME) --image $(Build.Repository.Name):$(build.SourceBranchName)-$(build.BuildId) .
+  #workingDirectory: '$(modulePath)'
+  displayName: 'ACR Build and Publish'
 
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
