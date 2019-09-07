@@ -16,7 +16,7 @@ trigger:
     - '/service-B/*'
 
 variables:
-- group: MyVarGroup
+- group: MyVarGroup # Set in Azure Dev Ops
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -40,7 +40,7 @@ steps:
 
 - script: |
     # Use ACR build task to build and push
-    cd service-B
+    cd service-B #Hardcoded path. Need to make sure Build.DefinitionName matches directory. It's case sensitive
     echo "az acr build -r $(ACR_NAME) --image $(Build.DefinitionName):$(build.SourceBranchName)-$(build.BuildId) ."
     az acr build -r $(ACR_NAME) --image $(Build.DefinitionName):$(build.SourceBranchName)-$(build.BuildId) .
   #workingDirectory: '$(modulePath)'
