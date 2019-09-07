@@ -41,7 +41,7 @@ steps:
 
 - script: |
     # Use ACR build task to build and push
-    cd service-A
+    cd service-C
     echo "az acr build -r $(ACR_NAME) --image $(Build.DefinitionName):$(build.SourceBranchName)-$(build.BuildId) ."
     az acr build -r $(ACR_NAME) --image $(Build.DefinitionName):$(build.SourceBranchName)-$(build.BuildId) .
   #workingDirectory: '$(modulePath)'
