@@ -21,12 +21,30 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
     # echo Add other tasks to build, test, and deploy your project.
     # echo See https://aka.ms/yaml
     printenv | sort
+    pwd
+    ls -la
     echo "The name of this service is: $(BUILD.BUILDNUMBER)"
   displayName: 'Run a multi-line script'
+
+- script: |
+    # Login to Azure 
+    echo "az login --service-principal --username $(SP_APP_ID) --password $(SP_PASS) --tenant $(SP_TENANT)"
+    az login --service-principal --username "$(SP_APP_ID)" --password "$(SP_PASS)" --tenant "$(SP_TENANT)"
+  #workingDirectory: '$(modulePath)'
+  displayName: 'Azure Login'
+
+# - script: |
+#     # Use ACR build task to build and push
+#     echo "az acr build -r $(ACR_NAME) --image $(Build.Repository.Name):$(build.SourceBranchName)-$(build.BuildId) ."
+#     az acr build -r $(ACR_NAME) --image $(Build.Repository.Name):$(build.SourceBranchName)-$(build.BuildId) .
+#   #workingDirectory: '$(modulePath)'
+#   displayName: 'ACR Build and Publish'
+
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+
