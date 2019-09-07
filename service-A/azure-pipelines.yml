@@ -17,6 +17,9 @@ trigger:
     #Hardcoding for now
     - '/service-A/*' 
 
+variables:
+- group: MyVarGroup
+
 pool:
   vmImage: 'ubuntu-latest'
 
