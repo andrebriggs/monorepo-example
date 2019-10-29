@@ -1,0 +1,20 @@
+rings: {}
+services:
+  ./service-A:
+    helm:
+      chart:
+        branch: ''
+        git: ''
+        path: ''
+  ./service-B:
+    helm:
+      chart:
+        branch: ''
+        git: ''
+        path: ''
+  ./service-C:
+    helm:
+      chart:
+        branch: ''
+        git: ''
+        path: ''

@@ -1,0 +1,17 @@
+services:
+  ./:
+    maintainers:
+      - email: andrebriggs@users.noreply.github.com
+        name: ''
+  ./service-A:
+    maintainers:
+      - email: maintainer email
+        name: maintainer name
+  ./service-B:
+    maintainers:
+      - email: maintainer email
+        name: maintainer name
+  ./service-C:
+    maintainers:
+      - email: maintainer email
+        name: maintainer name
